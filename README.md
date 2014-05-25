@@ -15,10 +15,10 @@ git clone git@github.com:prezi/plotserver.git
 cd plotserver
 npm install
 node plotserver.js config/test.js
-# open http://localhost:9090 in your browser
+# open http://localhost:9001 in your browser
 ```
 
-Cool samples under `http://localhost:9090/samples` :)
+Cool samples under `http://localhost:9001/samples` :)
 
 ## Detailed Description
 
