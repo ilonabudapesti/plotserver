@@ -8,12 +8,20 @@ Plotserver is a node.js application for easy plotting of timeseries and other si
 ## Installation
 ---
 
-You will need a working node.js installation and git:
+You will need:
+
+- a working node.js installation with npm
+- git
+- posix
+- Python 2.x (not 3.x) for the appropriate bit for your system (32bit or 64bit) note: a clash will cause an error and will not allow you to run npm
+- C++ installation on Windows
 
 ```bash
 git clone git@github.com:prezi/plotserver.git
 cd plotserver
 npm install
+npm init
+// fill out the required information to createa a package.json
 node plotserver.js config/test.js
 # open http://localhost:9001 in your browser
 ```
