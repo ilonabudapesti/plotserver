@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Plotserver</title>
+        <link href="/static/favicon.png" rel="icon" type="image/png" />
+        <link href="/static/client.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/static/config.js"></script>
+        <script type="text/javascript" src="/static/common.js"></script>
+        <script type="text/javascript" src="/static/client.js"></script>
+        <script type="text/javascript" src="/static/aggregate.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="https://canvg.googlecode.com/svn/trunk/canvg.js"></script>
+        <script type="text/javascript" src="https://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            google.load('visualization', '1.0', {'packages':['corechart', 'annotatedtimeline']});
+            google.setOnLoadCallback(init);
+        </script>
+    </head>
+    <body onResize="draw(lastData)">
+        <div id="viewContainer">
+            <div id="plotContainer">
+                <div id="lineChart"></div>
+                <div id="columnChart"></div>
+                <div id="areaChart"></div>
+                <div id="pieChart"></div>
+            </div>
+            <button id="editView" onClick="toggleEditMode()">Edit plot</button>
+        </div>
+        
+        <div id="editContainer">
+            <textarea id="options" class="textarea" onInput="onOptionsChanged()"></textarea>
+            <textarea id="numbers" class="textarea" onKeyUp="onNumbersChanged($('#numbers').val())" onChange="onNumbersChanged($('#numbers').val())"></textarea>
+            <button id="save" onClick="save($('#numbers').val(), $('#options').val())">Save</button>
+            <a id="optionsHelp" class="helpOverlay" target="top_" href="https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart">Chart options</a>
+            <a id="numbersHelp" class="helpOverlay" target="top_" href="/static/sample.csv">Example .csv data</a>
+        </div>
+    </body>
+</html>

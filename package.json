@@ -1,23 +1,14 @@
 {
   "name": "plotserver",
-  "version": "0.0.1",
-  "private": true,
-  "description": "local repo for plotserver",
-  "main": "plotserver.js",
-  "scripts": {
-    "test": "test"
+  "version": "1.0.0",
+  "description": "An awesome webserver for plotting simple timeseries data.",
+  "author": "Marton Trencseni <mtrencseni@gmail.com> (https://github.com/mtrencseni)",
+  "dependencies": {
+    "mime": "1.2.x",
+    "scribe": ">= 0.0.8",
+    "prezi-godauth": "*",
+    "posix": "*"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/monthypython/plotserver.git"
-  },
-  "keywords": [
-    "plotserver"
-  ],
-  "author": "Monthy Python",
-  "license": "none",
-  "bugs": {
-    "url": "https://github.com/monthypython/plotserver/issues"
-  },
-  "homepage": "https://github.com/monthypython/plotserver"
+  "engine": "node >= 0.8.12",
+  "scripts": {"start": "node plotserver.js config/test.js"}
 }
