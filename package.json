@@ -1,0 +1,23 @@
+{
+  "name": "plotserver",
+  "version": "0.0.1",
+  "private": true,
+  "description": "local repo for plotserver",
+  "main": "plotserver.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monthypython/plotserver.git"
+  },
+  "keywords": [
+    "plotserver"
+  ],
+  "author": "Monthy Python",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/monthypython/plotserver/issues"
+  },
+  "homepage": "https://github.com/monthypython/plotserver"
+}
